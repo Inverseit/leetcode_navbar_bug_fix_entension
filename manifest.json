@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "LeetcodeBugFixer",
+  "version": "1.0",
+  "description": "Fixes Navbar bug on Leetcode",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://leetcode.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://leetcode.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
